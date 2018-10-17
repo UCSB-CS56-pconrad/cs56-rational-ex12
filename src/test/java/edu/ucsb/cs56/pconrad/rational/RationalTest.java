@@ -250,6 +250,23 @@ public class RationalTest {
     }
 
     @Test
+    public void test_ge_1() {
+        Rational a = new Rational(1,3);
+        Rational b = new Rational(1,3);
+        assertTrue(a.ge(b));
+        assertTrue(b.ge(a));
+    }
+
+    @Test
+    public void test_ge_2() {
+        Rational a = new Rational(1,3);
+        Rational b = new Rational(2,3);
+        assertFalse(a.ge(b));
+        assertTrue(b.ge(a));
+    }
+
+
+    @Test
     public void test_lt_3() {
 	Rational a = new Rational(1,4);
 	Rational b = new Rational(1,3);
@@ -305,11 +322,27 @@ public class RationalTest {
     }
 
     @Test
+    public void test_gt_1() {
+        Rational a = new Rational(1,3);
+        Rational b = new Rational(1,3);
+        assertFalse(a.gt(b));
+        assertFalse(b.gt(a));
+    }
+
+    @Test
     public void test_le_2() {
 	Rational a = new Rational(1,3);
 	Rational b = new Rational(2,3);
 	assertTrue(a.le(b));
 	assertFalse(b.le(a));
+    }
+
+    @Test
+    public void test_gt_2() {
+        Rational a = new Rational(1,3);
+        Rational b = new Rational(2,3);
+        assertFalse(a.gt(b));
+        assertTrue(b.gt(a));
     }
 
     @Test

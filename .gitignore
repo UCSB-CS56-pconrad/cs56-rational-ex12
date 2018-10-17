@@ -1,3 +1,8 @@
+
+# .idea directory is created by IntelliJ, apparently
+.idea/
+
+
 target/
 
 
